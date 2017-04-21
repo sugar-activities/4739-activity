@@ -1,0 +1,37 @@
+=transform($v)
+  -webkit-transform: $v
+  -moz-transform: $v
+  -ms-transform: $v
+  -o-transform: $v
+  transform: $v
+
+body, #canvas
+  overflow-x: hidden
+
+.slides
+  overflow-x: hidden
+
+  section
+    position: absolute
+    display: block
+    transition: left ease 1s
+    left: 0%
+
+    margin: 16px
+    padding: 16px
+
+    width: 95%
+    width: -webkit-calc(100% - 64px)
+    width: calc(100% - 64px)
+
+    min-height: 95%
+    min-height: -webkit-calc(100% - 64px)
+    min-height: calc(100% - 64px)
+
+  section.to-see
+    left: 100%
+    // display: none
+
+  section.seen
+    left: -100%
+    // display: none
